@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const DotenvWebpackPlugin = require('dotenv-webpack');
 module.exports = {
   //Punto de entrada
+  mode:'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
