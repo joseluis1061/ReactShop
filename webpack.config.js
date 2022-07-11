@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //const DotenvWebpackPlugin = require('dotenv-webpack');
 module.exports = {
   //Punto de entrada
@@ -36,15 +36,17 @@ module.exports = {
         ],
       },
       //Optimización CSS
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: MiniCssExtractPlugin.loader,
-      //     },
-      //     'css-loader',
-      //   ],
-      // },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          // },
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
 
@@ -57,23 +59,23 @@ module.exports = {
     }),
 
     //Css
-    // new MiniCssExtractPlugin({
-    //   filename: 'assets/[name].css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
 
     //Variables de entorno
     //new DotenvWebpackPlugin(),
   ],
   //Servidor de salida de la App
-  // devServer: {
-  //   static: {
-  //     directory: path.resolve(__dirname, "dist"),
-  //   },
-  //   devMiddleware: {
-  //     index: 'index.html',
-  //   },
-  //   historyApiFallback: true,
-  //   compress: true,
-  //   port: 3000,
-  // },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    devMiddleware: {
+      index: 'index.html',
+    },
+    historyApiFallback: true,
+    compress: true,
+    port: 3000,
+  },
 };
