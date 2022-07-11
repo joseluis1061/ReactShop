@@ -56,23 +56,23 @@ module.exports = {
     }),
 
     //Css
-    new MiniCssExtractPlugin({
-      filename: 'assets/[name].css',
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: 'assets/[name].css',
+    // }),
 
     //Variables de entorno
-    new DotenvWebpackPlugin(),
+    //new DotenvWebpackPlugin(),
   ],
   //Servidor de salida de la App
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-    },
-    devMiddleware: {
-      index: 'index.html',
-    },
-    historyApiFallback: true,
-    compress: true,
-    port: 3000,
-  },
+  // devServer: {
+  //   static: {
+  //     directory: path.resolve(__dirname, "dist"),
+  //   },
+  //   devMiddleware: {
+  //     index: 'index.html',
+  //   },
+  //   historyApiFallback: true,
+  //   compress: true,
+  //   port: 3000,
+  // },
 };
