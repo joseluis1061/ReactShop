@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Home } from '../containers/Home';
+import { Home } from '../pages/Home';
 import { Layout } from '../containers/Layout';
 import { Login } from '../containers/Login';
 import { RecoveryPassword } from '../containers/RecoveryPassword';
-import { NotFound } from '../containers/NotFound';
+import { NotFound } from '../pages/NotFound';
 import '../styles/global.css';
 const App = () => {
   return (
