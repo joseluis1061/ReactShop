@@ -37,7 +37,7 @@ module.exports = {
       },
       //Optimización CSS
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(css|scss)$/,
         use: [
           // {
           //   loader: MiniCssExtractPlugin.loader,
