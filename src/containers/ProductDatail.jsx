@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {ProductInfo} from '../components/ProductInfo';
+import '../styles/ProductDetail.scss';
 
 export const ProductDatail = () => {
   return (
-    <div>ProductDatail</div>
-  )
+    <aside className="ProductDetail">
+			<div className="ProductDetail-close">
+				<img src="./icons/icon_close.png" alt="close" />
+			</div>
+			<ProductInfo />
+		</aside>
+	);
 }
