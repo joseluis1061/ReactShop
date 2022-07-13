@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/recoveryPassword.scss';
-export const RecoveryPassword = () => {
+import '../styles/passwordRecovery.scss';
+export const PasswordRecovery = () => {
   return (
     <div className="login">
     <div className="form-container">
