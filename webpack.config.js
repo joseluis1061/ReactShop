@@ -13,6 +13,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@logos': path.resolve(__dirname, 'src/assets/logos/')
+    }
   },
 
   //Modulos que definen las reglas de optimización mediante loaders
@@ -47,6 +54,14 @@ module.exports = {
           'sass-loader',
         ],
       },
+      //Image
+      {
+        test: /\.(png|svg|jpg|jpeg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[hash][ext][query]',
+        },
+      }
     ],
   },
 
