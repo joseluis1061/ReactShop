@@ -4,7 +4,6 @@ import '../styles/ProductItem.scss';
 import addToCart from '@icons/bt_add_to_cart.svg';
 
 export const ProductItem = ({product}) => {
-	console.log(product)
 	const [cart, setCart] = useState([]);
 	const handleClick = () => {
 		setCart([]);
